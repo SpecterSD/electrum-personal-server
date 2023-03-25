@@ -24,7 +24,7 @@ from electrumpersonalserver.server.electrumprotocol import (
     get_block_header,
     get_current_header,
     get_block_headers_hex,
-    DONATION_ADDR,
+    #DONATION_ADDR,
 )
 from electrumpersonalserver.server.mempoolhistogram import (
     MempoolSync,
@@ -82,8 +82,8 @@ def create_server_socket(hostport):
     server_sock.bind(hostport)
     server_sock.listen(1)
     logger.info("Listening for Electrum Wallet on " + str(hostport) + "\n\n"
-        + "If this project is valuable to you please consider donating:\n\t"
-        + DONATION_ADDR)
+       # + "If this project is valuable to you please consider donating:\n\t"
+       # + DONATION_ADDR)
     return server_sock
 
 def run_electrum_server(rpc, txmonitor, config):
